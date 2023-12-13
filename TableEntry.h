@@ -8,7 +8,7 @@ template <typename V>
 class TableEntry {
     public:
         std::string key;
-	V value = 0;
+	V value;
 
 	TableEntry(std::string key, V value){
 		this->key = key;
@@ -17,12 +17,12 @@ class TableEntry {
 
     	TableEntry(std::string key){
 		this->key = key;
-		value = 0;
+		value = NULL;
 	}
 
 	TableEntry(){
 		key = "";
-		value = 0;
+		value = NULL;
 	}
 
 	friend bool operator==(const TableEntry<V> &te1, const TableEntry<V> &te2){
